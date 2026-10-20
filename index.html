@@ -63,6 +63,36 @@
   .dialog label{margin:13px 0 6px}
   .dialog input,.dialog textarea,.dialog select{padding:11px}
 }
+
+/* Mobile containment: keep all content after hero within the viewport. */
+@media(max-width:700px){
+  body{width:100%;overflow-x:clip}
+  body > section:not(.hero),body > footer{width:100%;max-width:100%;min-width:0}
+  #opportunities,#how,.cta,.footer{box-sizing:border-box;max-width:100%;overflow-x:clip}
+  #opportunities *,#how *,.cta *,.footer *{min-width:0;max-width:100%;box-sizing:border-box}
+  #opportunities .section-head{display:block;width:100%}
+  #opportunities h2,#how h2,.cta h2{overflow-wrap:break-word;word-break:normal;hyphens:auto;letter-spacing:-.045em}
+  #opportunities h2{font-size:clamp(25px,6.6vw,32px);line-height:1.17}
+  #opportunities .sub{width:100%;overflow-wrap:anywhere}
+  #opportunities .search{display:block;width:100%;min-width:0;font-size:16px}
+  #opportunities .filterbar{width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start}
+  #opportunities .filter{flex:0 0 auto;max-width:100%;white-space:normal}
+  #opportunities .cards{width:100%;display:grid;grid-template-columns:minmax(0,1fr)}
+  #opportunities .card{width:100%;min-width:0;max-width:100%;overflow:hidden}
+  #opportunities .card h3,#opportunities .card p{overflow-wrap:anywhere;max-width:100%}
+  #opportunities .card .meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;width:100%;min-width:0}
+  #opportunities .card .meta > *{min-width:0;overflow-wrap:anywhere}
+  #opportunities .card button{white-space:normal;text-align:right;flex-shrink:0}
+  #how .steps-inner{width:100%;max-width:100%;padding:36px 16px 40px}
+  #how .stepgrid{display:grid;grid-template-columns:minmax(0,1fr);width:100%}
+  #how .step{width:100%;max-width:100%;min-width:0;padding:17px}
+  #how .step h3,#how .step p{overflow-wrap:anywhere}
+  .cta{padding:36px 16px 40px}
+  .cta h2{font-size:clamp(25px,6.6vw,32px);line-height:1.18}
+  .cta p{overflow-wrap:anywhere}
+  .cta .btn{max-width:100%;white-space:normal;line-height:1.4;text-align:center}
+  .footer{padding:22px 16px;overflow-wrap:anywhere}
+}
 </style></head><body>
 <section class="hero" id="top"><header class="header"><a class="logo" href="#top">FAYDLY<span>.</span></a><nav class="nav"><a href="#opportunities">Возможности</a><a href="#how">Как это работает</a><a href="#about">О платформе</a></nav><div class="header-actions"><button class="btn login" onclick="openModal('login')">Войти</button><button class="btn dark" onclick="openModal('register')">Регистрация ↗</button></div></header>
 <div class="half left"><svg class="wave" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g1"><stop stop-color="#5dfab0" stop-opacity="0"/><stop offset=".55" stop-color="#b4ff65" stop-opacity=".95"/><stop offset="1" stop-color="#70ddab" stop-opacity="0"/></linearGradient></defs><g stroke="url(#g1)"><path d="M-80 470 Q170 30 390 330 T880 90"/><path d="M-80 490 Q180 60 400 340 T880 110"/><path d="M-80 510 Q190 90 410 350 T880 130"/><path d="M-80 530 Q200 120 420 360 T880 150"/><path d="M-80 550 Q210 150 430 370 T880 170"/><path d="M-80 570 Q220 180 440 380 T880 190"/><path d="M-80 590 Q230 210 450 390 T880 210"/><path d="M-80 610 Q240 240 460 400 T880 230"/></g></svg><div class="half-content"><div class="eyebrow">01 / МОИ ВОЗМОЖНОСТИ</div><h1>Предложения</h1><p>Находите клиентов, партнёров и людей, которым нужны ваши товары, услуги и навыки.</p><button class="btn lime" onclick="openModal('offer')">Разместить предложение <span>↗</span></button><div class="chips"><span class="chip">Клиенты</span><span class="chip">Партнёры</span><span class="chip">Сотрудничество</span></div></div></div>
