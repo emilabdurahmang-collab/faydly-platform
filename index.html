@@ -158,6 +158,13 @@
  .hero .half-content>.btn{align-self:stretch}
  .hero .half-content>.chips{width:100%}
 }
+
+/* Match the three label rows across both halves on narrow mobile screens. */
+@media(max-width:700px){
+ .hero .half-content>.chips{display:grid;grid-template-columns:minmax(0,1fr);gap:7px;align-content:start;margin-top:13px}
+ .hero .half-content>.chips .chip{display:flex;align-items:center;justify-content:center;min-height:34px;width:100%;padding:7px 5px;text-align:center;font-size:clamp(9px,2.5vw,12px);white-space:nowrap}
+ .hero .half-content,.hero .right .half-content{top:32.5%}
+}
 </style></head><body>
 <section class="hero" id="top"><header class="header"><a class="logo" href="#top">FAYDLY<span>.</span></a><nav class="nav"><a href="#opportunities">Возможности</a><a href="#how">Как это работает</a><a href="#about">О платформе</a></nav><div class="header-actions"><button class="btn login" onclick="openModal('login')">Войти</button><button class="btn dark" onclick="openModal('register')">Регистрация ↗</button></div></header>
 <div class="half left"><svg class="wave" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g1"><stop stop-color="#5dfab0" stop-opacity="0"/><stop offset=".55" stop-color="#b4ff65" stop-opacity=".95"/><stop offset="1" stop-color="#70ddab" stop-opacity="0"/></linearGradient></defs><g stroke="url(#g1)"><path d="M-80 470 Q170 30 390 330 T880 90"/><path d="M-80 490 Q180 60 400 340 T880 110"/><path d="M-80 510 Q190 90 410 350 T880 130"/><path d="M-80 530 Q200 120 420 360 T880 150"/><path d="M-80 550 Q210 150 430 370 T880 170"/><path d="M-80 570 Q220 180 440 380 T880 190"/><path d="M-80 590 Q230 210 450 390 T880 210"/><path d="M-80 610 Q240 240 460 400 T880 230"/></g></svg><div class="half-content"><div class="eyebrow">01 / МОИ ВОЗМОЖНОСТИ</div><h1>Предложения</h1><p>Расскажите о своей профессии или бизнесе, чем занимаетесь, какие товары, услуги и навыки предлагаете.</p><button class="btn lime" onclick="openModal('offer')">Разместить предложение <span>↗</span></button><div class="chips"><span class="chip">Деятельность</span><span class="chip">Возможности</span><span class="chip">Предложения</span></div></div></div>
